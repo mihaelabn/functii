@@ -16,7 +16,9 @@ Utilizați list comprehension în proces
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_2():
+    return[x**2 for x in range(1,11) ]
+print(task_2())
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -25,16 +27,24 @@ Utilizați list comprehension în proces.
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_3():
+    return[x for x in range(1,11) if x%2 != 0]
+print(task_3())
 # CODUL TĂU VINE MAI SUS:
 
 """
-Task: Creați o funcție cu numele "task_4" care primind ca argument o matrice de liste precum [[1, 2], [3, 4], [5, 6]]
-va returna o listă aplatizată sau altfel spus o listă cu elementele fiecărei liste , adică [1, 2, 3, 4, 5, 6]
+    Task: Creați o funcție cu numele "task_4" care primind ca argument o matrice de liste precum [[1, 2], [3, 4], [5, 6]]
+    va returna o listă aplatizată sau altfel spus o listă cu elementele fiecărei liste , adică [1, 2, 3, 4, 5, 6]
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+def task_4(lista):
+    result = []
+    for sublist in lista:
+        result.extend(sublist)
+    return result
+lista = [[1,2],[3,4],[5,6]]
+print(task_4(lista))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -44,6 +54,9 @@ Exemplu: Pentru n=10 rezultatul returnat va fi ["impar", "par", "impar", "par", 
 """
 
 # CODUL TĂU VINE MAI JOS:
+def task_5(n):
+    return["par" if x%2 ==0 else "impar" for x in range(1, n+1)]
+print(task_5(3))
 
 # CODUL TĂU VINE MAI SUS:
 
@@ -55,9 +68,11 @@ Exemplu: Pentru n=5 rezultatul returnat va fi {1: 1, 2: 8, 3: 27, 4: 64, 5: 125}
 
 # CODUL TĂU VINE MAI JOS:
 # print("Ex 6:")
-
-# n = int(input("Introduceti n: "))
-# print(task_6(n))
+def task_6(n):
+    return {x: x**3 for x in range(1, n + 1)}
+print("Ex 6:")
+n = int(input("Introduceti n: "))
+print(task_6(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
