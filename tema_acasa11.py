@@ -82,10 +82,11 @@ Exemplu: Pentru n=50 rezultatul returnat va fi {3, 6, 9, 12, 15, 18, 21, 24, 27,
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 7:")
-
-# n = int(input("Introduceti n: "))
-# print(task_7(n))
+print("Ex 7:")
+def task_7(n):
+    return {x for x in range(1, n + 1) if x % 3 == 0}
+n = int(input("Introduceti n: "))
+print(task_7(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -94,6 +95,14 @@ Exemplu: Pentru lista [1, 2, 3, 4, 5] rezultatul va fi 3.0
 """
 
 # CODUL TĂU VINE MAI JOS:
+print("EXERCITIUL 8")
+def task_8(lista):
+    if not lista:
+        return 0
+    return sum(lista) / len(lista)
+input_ = input("Introdu elementele listei: ")
+lista = [float(x) for x in input_.split(',')]
+print(task_8(lista))
 
 # CODUL TĂU VINE MAI SUS:
 
@@ -103,8 +112,15 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 9:")
+print("Ex 9:")
+def task_9(n):
 
+    if n%2 ==0:
+        return True
+    else:
+        return False
+numar = int(input("Introduceti numarul: "))
+print(task_9(numar))
 # n = int(input("Dati un numar: "))
 # print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
@@ -116,8 +132,13 @@ Exemplu: Pentru numele "Ana", vârsta 32 și orașul "București" rezultatul va 
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 10:")
+print("Ex 10:")
+def task_10(nume, varsta, oras = "Chisinau"):
+    return f"Nume: {nume}, Varsta{varsta}, Oras:{oras}"
+nume = input("Introduceti numele: ")
+varsta = input("Introduceti varsta: ")
 
+print(task_10(nume, varsta))
 # nume = input("Dati un nume: ")
 # varsta = int(input("Dati varsta: "))
 # oras = input("Dati orasul (optional): ")
