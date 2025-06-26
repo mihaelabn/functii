@@ -164,7 +164,7 @@ Exemplu: inmulteste_cu_3 = task_10(3)
 """
 
 # CODUL TĂU VINE MAI JOS:
-
+print("TASK 10")
 # CODUL TĂU VINE MAI SUS:
 
 """
