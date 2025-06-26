@@ -67,7 +67,7 @@ Exemplu: Pentru n=5 rezultatul returnat va fi {1: 1, 2: 8, 3: 27, 4: 64, 5: 125}
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 6:")
+print("Ex 6:")
 def task_6(n):
     return {x: x**3 for x in range(1, n + 1)}
 print("Ex 6:")
@@ -114,15 +114,12 @@ Exemplu: Pentru numărul 4 rezultatul va fi `True`, iar pentru numărul 5 rezult
 # CODUL TĂU VINE MAI JOS:
 print("Ex 9:")
 def task_9(n):
-
     if n%2 ==0:
         return True
     else:
         return False
 numar = int(input("Introduceti numarul: "))
 print(task_9(numar))
-# n = int(input("Dati un numar: "))
-# print(task_9(n))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -137,12 +134,7 @@ def task_10(nume, varsta, oras = "Chisinau"):
     return f"Nume: {nume}, Varsta{varsta}, Oras:{oras}"
 nume = input("Introduceti numele: ")
 varsta = input("Introduceti varsta: ")
-
-print(task_10(nume, varsta))
-# nume = input("Dati un nume: ")
-# varsta = int(input("Dati varsta: "))
-# oras = input("Dati orasul (optional): ")
-# print(task_10(nume, varsta, oras))
+print(task_10(nume, varsta, oras="Chisinau"))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -151,6 +143,14 @@ Exemplu: Pentru lista [10, 20, 30, 40, 50] rezultatul va fi 50
 """
 
 # CODUL TĂU VINE MAI JOS:
+print("ex 11:")
+def task_11(lista):
+    if not lista:
+        return None
+    return max(lista)
+lista = [10, 20, 30, 40, 50]
+rezultat_task11 = task_11(lista)
+print(rezultat_task11)
 
 # CODUL TĂU VINE MAI SUS:
 
@@ -160,10 +160,16 @@ Exemplu: Pentru numărul 5 rezultatul va fi 120
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 12:")
-
-# nr = int(input("Al cui factorial doriti sa il calculati?: "))
-# print(task_12(nr))
+print("Ex 12:")
+def task_12(n):
+    if n < 0:
+        return None  # Factorialul nu e definit pentru numere negative
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial *= i
+    return factorial
+nr = int(input("Al cui factorial doriti sa il calculati?: "))
+print(task_12(nr))
 
 
 # CODUL TĂU VINE MAI SUS:
@@ -174,11 +180,14 @@ Exemplu: Pentru numerele 3 și 4 rezultatul va fi (7, 12)
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 13:")
-
-# a = int(input("Dati a: "))
-# b = int(input("Dati b: "))
-# print(task_13(a, b))
+print("Ex 13:")
+def task_13(a, b):
+    suma = a + b
+    produs = a * b
+    return (suma, produs)
+a = int(input("Dati a: "))
+b = int(input("Dati b: "))
+print(task_13(a, b))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -187,10 +196,16 @@ Exemplu: Pentru vârsta 32 rezultatul va fi "adult"
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 14:")
-
-# varsta = int(input("Dati varsta: "))
-# print(task_14(varsta))
+print("Ex 14:")
+def task_14(varsta):
+    if varsta < 18:
+        return "minor"
+    elif varsta <= 65:
+        return "adult"
+    else:
+        return "senior"
+varsta = int(input("Dati varsta: "))
+print(task_14(varsta))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -199,10 +214,13 @@ Exemplu: Pentru string-ul "ana" rezultatul va fi `True`, iar pentru string-ul "t
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 15:")
-
-# str = input("Dati un string: ")
-# print(task_15(str))
+print("Ex 15:")
+def task_15(sir):
+    sir = sir.lower()  
+    sir = sir.replace(" ", "")  
+    return sir == sir[::-1]
+str = input("Dati un string: ")
+print(task_15(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -211,10 +229,11 @@ Exemplu: Pentru string-ul "test" rezultatul va fi "tset"
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 16:")
-
-# str = input("Dati un string: ")
-# print(task_16(str))
+print("Ex 16:")
+def task_16(sir):
+    return sir[::-1]
+str = input("Dati un string: ")
+print(task_16(str))
 
 # CODUL TĂU VINE MAI SUS:
 
@@ -224,10 +243,12 @@ Exemplu: Pentru string-ul "Hello, World!" rezultatul va fi 2
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 17:")
-
-# str = input("Dati un string: ")
-# print(task_17(str))
+print("Ex 17:")
+def task_17(sir):
+    cuvinte = sir.strip().split()
+    return len(cuvinte)
+str = input("Dati un string: ")
+print(task_17(str))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -236,10 +257,11 @@ Exemplu: Pentru temperatura 0 rezultatul va fi 32.0
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 18:")
-
-# temp = float(input("Dati temperatura in C: "))
-# print(task_18(temp))
+print("Ex 18:")
+def task_18(temp_celsius):
+    return (temp_celsius * 9/5) + 32
+temp = float(input("Dati temperatura in C: "))
+print(task_18(temp))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -248,10 +270,16 @@ Exemplu: Pentru numărul 7 rezultatul va fi `True`, iar pentru numărul 10 rezul
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 19:")
-
-# nr = int(input("Dati un numar: "))
-# print(task_19(nr))
+print("Ex 19:")
+def task_19(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+nr = int(input("Dati un numar: "))
+print(task_19(nr))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -261,10 +289,17 @@ Exemplu: Pentru numărul 28 rezultatul va fi `True`, iar pentru numărul 10 rezu
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 20:")
-
-# nr = int(input("Dati un numar: "))
-# print(task_20(nr))
+print("Ex 20:")
+def task_20(n):
+    if n <= 0:
+        return False
+    suma_divizori = 0
+    for i in range(1, n):
+        if n % i == 0:
+            suma_divizori += i
+    return suma_divizori == n
+nr = int(input("Dati un numar: "))
+print(task_20(nr))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -299,10 +334,18 @@ Exemplu: Pentru numărul 5 rezultatul va fi [0, 1, 1, 2, 3]
 """
 
 # CODUL TĂU VINE MAI JOS:
-# print("Ex 23:")
-
-# nr = int(input("Dati un numar: "))
-# print(task_23(nr))
+print("Ex 23:")
+def task_23(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    fib = [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+    return fib
+nr = int(input("Dati un numar: "))
+print(task_23(nr))
 # CODUL TĂU VINE MAI SUS:
 
 """
@@ -311,6 +354,16 @@ Exemplu: Pentru numărul 10 rezultatul va fi [1, 2, 5, 10]
 """
 
 # CODUL TĂU VINE MAI JOS:
+print("Ex 24:")
+
+def task_24(n):
+    if n <= 0:
+        return []
+    return [i for i in range(1, n + 1) if n % i == 0]
+
+# Exemplu de utilizare:
+nr = int(input("Dati un numar: "))
+print(task_24(nr))
 
 
 # CODUL TĂU VINE MAI SUS:
