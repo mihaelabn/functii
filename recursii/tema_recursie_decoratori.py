@@ -266,6 +266,15 @@ Exemplu: task_13(123) -> 6 (1+2+3)
 """
 
 # CODUL TĂU VINE MAI JOS:
+print("TASK 13")
+def task_13(n):
+    if n < 10:
+        return n
+    else:
+        return n % 10 + task_13(n // 10)
+print(task_13(123))  
+print(task_13(456))  
+print(task_13(7))    
 
 # CODUL TĂU VINE MAI SUS:
 
