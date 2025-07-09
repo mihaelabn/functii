@@ -96,3 +96,5 @@ if __name__ == "__main__":
     vehicles = [car, bicycle, motorcycle]
     for i in vehicles:
         print(i.get_info())
+
+
