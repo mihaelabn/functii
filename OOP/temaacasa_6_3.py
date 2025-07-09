@@ -97,4 +97,4 @@ if __name__ == "__main__":
     for i in vehicles:
         print(i.get_info())
 
-#Comentariu pentru branchh
+
